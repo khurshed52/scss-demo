@@ -1,0 +1,61 @@
+$headcolor:red;
+$fontsize:1em;
+$green:green;
+$boxbg:#fff;
+
+@import 'reset';
+@import 'mixin';
+@import 'button';
+
+#main {
+    color: blue;
+    font-size: 1em;
+  
+    a {
+      font: {
+        weight: bold;
+        family: serif;
+      }
+      &:hover {
+        background-color: #eee;
+        color: $green;
+      }
+    }
+  }
+
+h1 {
+    color: $headcolor;
+    font-size: $fontsize;
+}
+
+.box {
+    @include box;
+}
+
+.contact {
+    @include box;
+}
+
+.contact div {
+    background: $boxbg;
+    @include border-radius();
+}
+
+@include small {
+   h1 {
+       color:$green
+   }
+}
+
+@include desktop {
+    h1 {
+        background: $green;
+    }
+}
+
+.primary {
+    @include button-bg(#b68a35);
+}
+.main {
+    @include button-bg(#e31434);
+}

@@ -1,0 +1,24 @@
+@mixin box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px
+}
+
+@mixin small() {
+    @media only screen and (max-width: 979px) {
+        @content;
+    }
+}
+
+@mixin desktop(){
+    @media only screen and (min-width:768px) {
+        @content;
+    }
+}
+
+@mixin border-radius() {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    border-radius: 8px;
+}
